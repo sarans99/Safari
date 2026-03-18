@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Safari
+﻿namespace Safari
 {
     internal class HuntingGround : SafariEnvironment<IHunt>
     {
@@ -12,9 +6,17 @@ namespace Safari
         {
             foreach (Animal animal in animalsInEnvironment)
             {
-                if (animal is IHunt huntingAnimal)
+                if (animal is IHunt && animal is IFly)
                 {
-                    huntingAnimal.Hunt();
+                    Console.WriteLine(animal.GetType().Name + " is hunting in the skies above the hunting ground");
+                }
+                else if (animal is IHunt && animal is ISwim)
+                {
+                    Console.WriteLine(animal.GetType().Name + " is hunting in the waters of the hunting ground");
+                }
+                else if (animal is IHunt)
+                {
+                    Console.WriteLine(animal.GetType().Name + " is hunting on land in the hunting ground");
                 }
             }
         }
