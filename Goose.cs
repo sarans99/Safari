@@ -6,25 +6,23 @@ using System.Threading.Tasks;
 
 namespace Safari
 {
-    internal class Penguin : Bird, IHunt, ISwim
+    internal class Goose : Bird, IFly, ISwim
     {
-        public Penguin(float weight) : base(weight)
+        public Goose(float weight) : base(weight)
         {
         }
 
         public override void MakeSound()
         {
-            Console.WriteLine("Penguin squawks!");
+            Console.WriteLine("Goose squawks!");
         }
-
-        public void Hunt()
+        public void Fly()
         {
-            Console.WriteLine("Penguin is hunting in the water!");
+            Console.WriteLine("Goose is flying!");
         }
-
         public void Swim()
         {
-            Console.WriteLine("Penguin is swimming!");
+            Console.WriteLine("Goose is swimming!");
         }
     }
 }

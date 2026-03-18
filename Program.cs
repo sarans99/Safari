@@ -1,17 +1,49 @@
-﻿using Safari;
+﻿//using Safari;
 
-class Program
+//class Program
+//{
+//    static void Main(string[] args)
+//    {
+//        Tiger fluffy = new Tiger(70.5f);
+//        Penguin penny = new Penguin(21);
+
+//        fluffy.MakeSound();
+//        penny.MakeSound();
+
+//        fluffy.Hunt();
+//        penny.Hunt(); 
+//        penny.Swim();
+//    }
+//}
+
+using Safari;
+
+class program
 {
     static void Main(string[] args)
     {
         Tiger fluffy = new Tiger(70.5f);
         Penguin penny = new Penguin(21);
+        Goose jeff = new Goose(5.5f);
+        Bat betty = new Bat(0.7f);
 
-        fluffy.MakeSound();
-        penny.MakeSound();
+        List<Animal> animals = new List<Animal>()
+    { fluffy, penny, jeff, betty };
 
-        fluffy.Hunt();
-        penny.Hunt(); 
-        penny.Swim();
+        foreach (Animal animal in animals)
+        {
+            if (animal is IFly flyingAnimal)
+            {
+                flyingAnimal.Fly();
+            }
+            if (animal is IHunt huntingAnimal)
+            {
+                huntingAnimal.Hunt();
+            }
+            if (animal is ISwim swimmingAnimal)
+            {
+                swimmingAnimal.Swim();
+            }
+        }
     }
 }

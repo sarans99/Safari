@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Safari
 {
-    internal class Tiger : PantheraBigCat
+    internal class Tiger : PantheraBigCat, IHunt
     {
         public Tiger(float weight) : base(weight)
         {
