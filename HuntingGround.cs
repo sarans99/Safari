@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace Safari
 {
-    internal class HuntingGround
+    internal class HuntingGround : SafariEnvironment<IHunt>
     {
+        public override void CheckAnimalsInEnvironment()
+        {
+            foreach (Animal animal in animalsInEnvironment)
+            {
+                if (animal is IHunt huntingAnimal)
+                {
+                    huntingAnimal.Hunt();
+                }
+            }
+        }
     }
 }
