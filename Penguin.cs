@@ -14,7 +14,7 @@ namespace Safari
 
         public override void MakeSound()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Penguin squawks!");
         }
 
         public void Move()

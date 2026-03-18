@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Safari
 {
-    internal class ISwim
+    interface ISwim
     {
+        public void Swim();
     }
 }

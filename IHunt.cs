@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Safari
 {
-    internal class IHunt
+    interface IHunt
     {
+        public void Hunt();
     }
 }
