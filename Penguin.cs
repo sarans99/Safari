@@ -17,9 +17,14 @@ namespace Safari
             Console.WriteLine("Penguin squawks!");
         }
 
-        public void Move()
+        public void Hunt()
         {
-            Console.WriteLine("Penguin is moving!");
+            Console.WriteLine("Penguin is hunting in the water!");
+        }
+
+        public void Swim()
+        {
+            Console.WriteLine("Penguin is swimming!");
         }
     }
 }
