@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Safari 
+{
+    internal abstract class Mammal : Animal
+    {
+        protected Mammal(float weight) : base(weight)
+        {
+        }
+    }
+}
